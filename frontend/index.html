@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head><title>My POC App</title></head>
+  <body>
+    <h1>Hello from Frontend!</h1>
+    <p id="backend"></p>
+    <script>
+      fetch("/api/hello")
+        .then(r => r.json())
+        .then(data => document.getElementById("backend").innerText = data.message)
+        .catch(console.error);
+    </script>
+  </body>
+</html>
