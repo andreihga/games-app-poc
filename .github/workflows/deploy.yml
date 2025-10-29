@@ -49,6 +49,6 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /home/deploy_poc/games-app-poc
+            cd /home/testmachine/myapp
             docker compose pull
             docker compose up -d
